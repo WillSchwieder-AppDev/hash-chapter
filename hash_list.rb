@@ -1,7 +1,7 @@
 # Given this list of people, print only names of people who are at least 16.
-# 
+#
 # Yes, you could just look at it with your eyes and print their names, but imagine that you couldn't because there are a million items in the list.
-# 
+#
 # Use the variable, loops, and conditionals instead.
 
 list_of_people = [
@@ -14,3 +14,8 @@ list_of_people = [
   { :name => "Carl", :age => 9 },
 ]
 
+for i in 0..6
+  if list_of_people.at(i).fetch(:age) >= 16
+    p list_of_people.at(i).fetch(:name)
+  end
+end
